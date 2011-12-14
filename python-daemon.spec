@@ -12,6 +12,7 @@ License:	Python
 Group:		Development/Languages
 URL:		http://pypi.python.org/pypi/python-daemon/
 Source0:	http://pypi.python.org/packages/source/p/python-daemon/%{name}-%{version}.tar.gz
+# Source0-md5:	c774eda27d6c5d80b42037826d29e523
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
 BuildRequires:	rpmbuild(macros) >= 1.219
