@@ -7,14 +7,15 @@
 Summary:	Library to implement a well-behaved Unix daemon process
 Name:		python-%{module}
 Version:	1.6
-Release:	1
+Release:	2
 License:	Python
 Group:		Development/Languages
-URL:		http://pypi.python.org/pypi/python-daemon/
 Source0:	http://pypi.python.org/packages/source/p/python-daemon/%{name}-%{version}.tar.gz
 # Source0-md5:	c774eda27d6c5d80b42037826d29e523
+URL:		http://pypi.python.org/pypi/python-daemon/
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 BuildRequires:	sed >= 4.0
 %if %{with tests}
@@ -39,7 +40,7 @@ This library implements the well-behaved daemon specification of PEP
 
 # Test suite requires minimock and lockfile
 %if %{with tests}
-PYTHONPATH=$(pwd) nosetests
+PYTHONPATH=$(pwd) nosetests-%{py_ver}
 %endif
 
 %install
