@@ -36,7 +36,7 @@ This library implements the well-behaved daemon specification of PEP
 %{__sed} -i -e '/^#!\//, 1d' daemon/version/version_info.py
 
 %build
-%{__python} setup.py build
+%py_build
 
 # Test suite requires minimock and lockfile
 %if %{with tests}
@@ -45,10 +45,7 @@ PYTHONPATH=$(pwd) nosetests-%{py_ver}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install \
-	--skip-build \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %py_postclean
 
