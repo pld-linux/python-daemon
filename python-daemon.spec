@@ -16,7 +16,7 @@ URL:		http://pypi.python.org/pypi/python-daemon/
 BuildRequires:	python-devel
 BuildRequires:	python-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	sed >= 4.0
 %if %{with tests}
 BuildRequires:	python-lockfile
