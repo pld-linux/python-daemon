@@ -7,7 +7,7 @@
 Summary:	Library to implement a well-behaved Unix daemon process
 Name:		python-%{module}
 Version:	1.6
-Release:	3
+Release:	4
 License:	Python
 Group:		Development/Languages
 Source0:	http://pypi.python.org/packages/source/p/python-daemon/%{name}-%{version}.tar.gz
